@@ -4,7 +4,7 @@
 
     <h1 class="text-center my-2 text-white">Inscription</h1>
 
-    <div class="col-lg-6 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
+    <div class="col-lg-4 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
 
         <form action="" method="POST" novalidate>
 
@@ -63,7 +63,7 @@
                     <div class="invalid-feedback"><?= $errors['confirmPassword'] ?? '' ?></div>
                 </div>
 
-                <div class="col-lg-7">
+                <div class="col-lg-11">
                     <div class="form-check mt-3 mb-2">
                         <input class="form-check-input <?= isset($errors['cgu']) ? 'is-invalid' : '' ?>" type="checkbox" id="cgu" name="cgu" required>
                         <label class="form-check-label" for="cgu">
