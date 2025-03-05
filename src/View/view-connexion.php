@@ -10,18 +10,19 @@
 
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-12">
-                    <label for="email" class="form-label">Identifiant</label>
-                    <input type="text" class="form-control form-control-sm <?= isset($_POST['email']) ? (isset($errors['email']) ? 'is-invalid' : 'is-valid') : '' ?>" id="email" name="email" value="<?= $_POST['email'] ?? '' ?>" required>
-                    <div class="invalid-feedback"><?= $errors['email'] ?? '' ?></div>
+                    <label for="identifiant" class="form-label">Identifiant</label>
+                    <input type="text" class="form-control form-control-sm <?= isset($_POST['identifiant']) ? (isset($errors['identifiant']) ? 'is-invalid' : 'is-valid') : '' ?>" id="identifiant" name="identifiant" value="<?= $_POST['identifiant'] ?? '' ?>" required>
+                    <div class="invalid-feedback"><?= $errors['identifiant'] ?? '' ?></div>
                 </div>
 
                 <div class="col-lg-12">
                     <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control form-control-sm <?= isset($_POST['password']) ? (isset($errors['password']) ? 'is-invalid' : 'is-valid') : '' ?>" id="password" name="password" value="<?= $_POST['password'] ?? '' ?>" required>
+                    <input type="password" class="form-control form-control-sm" id="password" name="password" required>
                     <div class="invalid-feedback"><?= $errors['password'] ?? '' ?></div>
                 </div>
 
                 <div class="col-lg-12">
+                    <p class="text-danger text-center"><?= $errors['connexion'] ?? '' ?></p>
                     <button class="btn btn-primary w-100">Connexion</button>
                 </div>
 
