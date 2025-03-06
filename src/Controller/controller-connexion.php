@@ -2,6 +2,12 @@
 
 session_start();
 
+if(isset($_SESSION['user_id'])){
+    // on renvoie vers la page d'accueil
+    header('Location: controller-profile.php');
+    exit;
+}
+
 require_once '../../config.php';
 
 // un défini un tableau vide qui contiendra les erreurs
@@ -31,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // options activées sur notre instance
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        // requete SQL
         $sql = "SELECT * FROM `76_users` WHERE `user_pseudo` = :identifiant OR `user_mail` = :identifiant";
 
         // on prepare la requete pour se prémunir des injections SQL
@@ -52,7 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errors['connexion'] = 'identifiant ou mot de passe incorrect';
         } else {
             if (password_verify($_POST['password'], $user['user_password'])) {
+                // nous stockons les données de l'utilisateur dans la session
                 $_SESSION = $user;
+
+                // nous supprimons le mot de passe de la session
+                unset($_SESSION['user_password']);
+                unset($_SESSION['user_activated']);
+
+                // nous redirigeons l'utilisateur vers son profil
                 header('Location: controller-profile.php');
                 exit;
             } else {

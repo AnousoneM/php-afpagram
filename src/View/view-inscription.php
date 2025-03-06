@@ -16,7 +16,7 @@
                         <option value="" selected disabled>-- Veuillez sélectionner votre genre --</option>
                         <option value="homme" <?= isset($_POST['gender']) && $_POST['gender'] == 'homme' ? 'selected' : '' ?>>Homme</option>
                         <option value="femme" <?= isset($_POST['gender']) && $_POST['gender'] == 'femme' ? 'selected' : '' ?>>Femme</option>
-                        <option value="autres" <?= isset($_POST['gender']) && $_POST['gender'] == 'autres' ? 'selected' : '' ?>>Autres</option>
+                        <option value="autre" <?= isset($_POST['gender']) && $_POST['gender'] == 'autre' ? 'selected' : '' ?>>Autre</option>
                     </select>
                     <div class="invalid-feedback"><?= $errors['gender'] ?? '' ?></div>
                 </div>

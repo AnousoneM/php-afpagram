@@ -17,7 +17,7 @@
 
                 <div class="col-lg-12">
                     <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control form-control-sm" id="password" name="password" required>
+                    <input type="password" class="form-control form-control-sm <?= isset($errors['identifiant']) ? 'is-invalid' : '' ?>" id="password" name="password" required>
                     <div class="invalid-feedback"><?= $errors['password'] ?? '' ?></div>
                 </div>
 
