@@ -13,7 +13,7 @@
             <div class="col-9 px-4">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-4">
-                        <p class="display-5 my-4 fw-bold"><?= $_SESSION['user_pseudo'] ?></p>
+                        <p class="d-inline display-5 my-4 fw-bold"><?= $_SESSION['user_pseudo'] ?></p><i class="bi bi-patch-check-fill ms-2 fs-4 text-primary"></i>
                     </div>
                     <div class="col-3">
                         <a href="#" class="btn btn-outline-primary w-100">profil</a>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-start align-items-center fs-5">
-                    <p class="col-3 my-3"><b>12</b> publication</p>
+                    <p class="col-3 my-3"><b><?= count($allPosts) ?></b> publication</p>
                     <p class="col-3 my-3"><b>123</b> followers</p>
                     <p class="col-3 my-3"><b>355</b> suivi(e)s</p>
                 </div>
