@@ -45,35 +45,13 @@
 
         <div class="row row-cols-lg-3 g-lg-1">
 
-            <div class="col">
-                <div>
-                    <img class="img-fluid" src="../../assets/img/users/1/glace.png" alt="Une glace">
+            <?php foreach ($allPosts as $post) { ?>
+                <div class="col">
+                    <div>
+                        <img class="img-fluid" src="../../assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>" alt="une image">
+                    </div>
                 </div>
-            </div>
-
-            <div class="col">
-                <div>
-                    <img class="img-fluid" src="../../assets/img/users/1/glace.png" alt="Une glace">
-                </div>
-            </div>
-
-            <div class="col">
-                <div>
-                    <img class="img-fluid" src="../../assets/img/users/1/glace.png" alt="Une glace">
-                </div>
-            </div>
-
-            <div class="col">
-                <div>
-                    <img class="img-fluid" src="../../assets/img/users/1/glace.png" alt="Une glace">
-                </div>
-            </div>
-
-            <div class="col">
-                <div>
-                    <img class="img-fluid" src="../../assets/img/users/1/glace.png" alt="Une glace">
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>
