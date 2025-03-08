@@ -7,6 +7,7 @@
     <div class="col-lg-4 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
 
         <div class="row g-1 justify-content-center">
+            
             <div class="col-lg-12 text-center">
                 <p class="fs-5">Vous pouvez maintenant vous connecter</p>
             </div>

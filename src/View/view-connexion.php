@@ -9,6 +9,7 @@
         <form action="" method="POST" novalidate>
 
             <div class="row g-4 justify-content-center">
+                
                 <div class="col-lg-12">
                     <label for="identifiant" class="form-label">Identifiant</label>
                     <input type="text" class="form-control form-control-sm <?= isset($_POST['identifiant']) ? (isset($errors['identifiant']) ? 'is-invalid' : 'is-valid') : '' ?>" id="identifiant" name="identifiant" value="<?= $_POST['identifiant'] ?? '' ?>" required>
