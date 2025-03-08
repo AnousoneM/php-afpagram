@@ -22,3 +22,22 @@ body {
     height: 1.6rem;
     width: 1.6rem;
 }
+
+.com-show {
+    text-decoration: none;
+    color: grey;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.com-add {
+    text-decoration: none;
+    color: grey;
+    font-size: 0.85rem;
+    display: block;
+}
+
+.post-date {
+    color: grey;
+    font-size: 0.9rem;
+}

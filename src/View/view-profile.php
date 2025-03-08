@@ -20,9 +20,6 @@
                     <div class="col-lg-3 text-center">
                         <a href="#" class="btn btn-sm btn-outline-primary w-100">paramètres</a>
                     </div>
-                    <div class="col-lg-3 text-center">
-                        <a href="../Controller/controller-deconnexion.php" class="btn btn-sm btn-primary w-100">déconnexion</a>
-                    </div>
                 </div>
                 <div class="row text-center align-items-center">
                     <p class="col my-3"><b><?= count($allPosts) ?></b> publication</p>
@@ -38,16 +35,6 @@
         <p class="text-center fs-5 mb-1">Publications</p>
 
         <div class="row row-cols-lg-3 row-cols-1 g-lg-1">
-
-            <?php
-            // boucle pour afficher les photos
-            foreach ($allPosts as $post) { ?>
-                <div class="col">
-                    <div class="photo">
-                        <img src="../../assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>" alt="une image">
-                    </div>
-                </div>
-            <?php } ?>
 
             <?php
             // boucle pour afficher les photos
