@@ -2,42 +2,19 @@
 
 <body class="bg-primary">
 
-    <nav class="d-lg-block d-none bg-light position-fixed col-lg-2 vh-100">
-        <div class="row flex-column m-0 h-100">
-
-            <h1 class="text-logo text-center py-4">Afpagram</h1>
-
-            <ul class="nav flex-column ps-2">
-                <li class="nav-item align-center">
-                    <a class="nav-link text-dark" href="#"><i class="h4 bi bi-house me-3"></i>Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#"><i class="h4 bi bi-search me-3"></i>Recherche</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#"><i class="h4 bi bi-plus-square me-3"></i>Créer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="mt-1 nav-link text-dark" href="#"><img src="../../assets/img/nezuko.gif" class="small-avatar border border-secondary rounded-circle me-3" alt="">Profil</a>
-                </li>
-            </ul>
-
-            <a href="../Controller/controller-deconnexion.php" class="btn btn-sm btn-outline-secondary mt-auto mb-3 w-75 mx-auto">déconnexion</a>
-
-        </div>
-    </nav>
+    <?php include '../../templates/navbar.php' ?>
 
     <main class="container p-4 offset-lg-3 col-lg-8 col-12 bg-light">
 
-        <div class="row mt-lg-4 mx-0">
+        <div class="row justify-content-around mt-lg-4 mx-0">
 
             <div class="col-lg-3">
                 <img src="../../assets/img/nezuko.gif" class="img-fluid rounded-circle" alt="Nezuko">
             </div>
 
-            <div class="col-lg-9 px-4">
-                <div class="row justify-content-start align-items-center">
-                    <div class="col text-center">
+            <div class="col-lg-7 px-4">
+                <div class="row align-items-center">
+                    <div class="col text-start">
                         <p class="d-inline display-6 my-4 fw-bold"><?= $_SESSION['user_pseudo'] ?></p><i class="bi bi-patch-check-fill ms-2 fs-4 text-primary"></i>
                     </div>
                     <div class="col-lg-3 text-center">
