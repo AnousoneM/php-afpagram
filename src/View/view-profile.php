@@ -7,7 +7,7 @@
 
             <h1 class="text-logo text-center py-4">Afpagram</h1>
 
-            <ul class="nav flex-column">
+            <ul class="nav flex-column ps-2">
                 <li class="nav-item align-center">
                     <a class="nav-link text-dark" href="#"><i class="h4 bi bi-house me-3"></i>Accueil</a>
                 </li>
@@ -18,11 +18,11 @@
                     <a class="nav-link text-dark" href="#"><i class="h4 bi bi-plus-square me-3"></i>Créer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#"><img src="../../assets/img/nezuko.gif" class="small-avatar border border-secondary rounded-circle me-3" alt="">Profil</a>
+                    <a class="mt-1 nav-link text-dark" href="#"><img src="../../assets/img/nezuko.gif" class="small-avatar border border-secondary rounded-circle me-3" alt="">Profil</a>
                 </li>
             </ul>
 
-            <a href="#" class="btn btn-outline-secondary mt-auto">deconnexion</a>
+            <a href="../Controller/controller-deconnexion.php" class="btn btn-sm btn-outline-secondary mt-auto mb-3 w-75 mx-auto">déconnexion</a>
 
         </div>
     </nav>
@@ -35,7 +35,7 @@
                 <img src="../../assets/img/nezuko.gif" class="img-fluid rounded-circle" alt="Nezuko">
             </div>
 
-            <div class="col-lg-9 px-4 border">
+            <div class="col-lg-9 px-4">
                 <div class="row justify-content-start align-items-center">
                     <div class="col text-center">
                         <p class="d-inline display-6 my-4 fw-bold"><?= $_SESSION['user_pseudo'] ?></p><i class="bi bi-patch-check-fill ms-2 fs-4 text-primary"></i>
@@ -61,6 +61,16 @@
         <p class="text-center fs-5 mb-1">Publications</p>
 
         <div class="row row-cols-lg-3 row-cols-1 g-lg-1">
+
+            <?php
+            // boucle pour afficher les photos
+            foreach ($allPosts as $post) { ?>
+                <div class="col">
+                    <div class="photo">
+                        <img src="../../assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>" alt="une image">
+                    </div>
+                </div>
+            <?php } ?>
 
             <?php
             // boucle pour afficher les photos
