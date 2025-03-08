@@ -12,7 +12,7 @@
 
             <div class="pt-3 pb-3 border-bottom">
                 <p><span class="fw-bold me-1"><?= $post['user_pseudo'] ?></span><span class="post-date"><i class="bi bi-dot"></i> 23/05/2024 18h00</span></p>
-                <img src="../../assets/img/users/<?= $post['user_id'] ?>/<?= $post['pic_name'] ?>" class="img-fluid mb-2" alt="<?= $post['pic_name'] ?>">
+                <img src="../../assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>" class="img-fluid mb-2" alt="<?= $post['pic_name'] ?>">
                 <div>
                     <a class="text-dark" href="#"><i class="bi bi-heart me-2 fw-bold"></i></a>
                     <a class="text-dark" href="#"><i class="bi bi-chat me-2 fw-b"></i></a>
