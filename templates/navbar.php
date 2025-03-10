@@ -11,10 +11,10 @@
                 <a class="nav-link text-dark" href="#"><i class="h4 bi bi-search me-3"></i>Recherche</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#"><i class="h4 bi bi-plus-square me-3"></i>Créer</a>
+                <a class="nav-link text-dark" href="../Controller/controller-creation.php"><i class="h4 bi bi-plus-square me-3"></i>Créer</a>
             </li>
             <li class="nav-item">
-                <a class="mt-1 nav-link text-dark" href="../Controller/controller-profile.php"><img src="../../assets/img/nezuko.gif" class="small-avatar border border-secondary rounded-circle me-3" alt="">Profil</a>
+                <a class="mt-1 nav-link text-dark" href="../Controller/controller-profile.php"><img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/avatar/' . $_SESSION['user_avatar'] ?>" class="small-avatar border border-secondary rounded-circle me-3" alt="">Profil</a>
             </li>
         </ul>
 

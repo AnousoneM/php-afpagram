@@ -192,6 +192,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // on test si la requête s'execute
         if ($stmt->execute()) {
+
+            $user_id = $pdo->lastInsertId();
+            // nom de l'avatar par défaut
+            $avatar_name = 'avatar.png';
+        
+            // nom du dossier que nous allons créer pour l'utilisateur
+            $user_directory = "../../assets/img/users/$user_id/avatar/";
+            // chemin de l'avatar : chemin + nom
+            $avatar_directory = "../../assets/img/$avatar_name";
+        
+            // nous allons créer un dossier avec les droits : 777
+            mkdir($user_directory, 0777, true);
+            // nous copions l'avatar dans le dossier cible de l'utilisateur
+            copy($avatar_directory, $user_directory . $avatar_name);
+
             header('Location: controller-confirmation.php');
             exit;
         }

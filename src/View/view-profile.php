@@ -9,7 +9,7 @@
         <div class="row justify-content-around mt-lg-4 mx-0">
 
             <div class="col-lg-3">
-                <img src="../../assets/img/nezuko.gif" class="img-fluid rounded-circle" alt="Nezuko">
+                <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/avatar/' . $_SESSION['user_avatar'] ?>" class="img-fluid rounded-circle" alt="Avatar photo">
             </div>
 
             <div class="col-lg-7 px-4">
