@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 unset($_SESSION['user_activated']);
 
                 // nous redirigeons l'utilisateur vers son profil
-                header('Location: controller-profile.php');
+                header('Location: controller-home.php');
                 exit;
             } else {
                 $errors['connexion'] = 'identifiant ou mot de passe incorrect';

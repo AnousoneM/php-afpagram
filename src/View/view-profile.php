@@ -17,7 +17,7 @@
                     <div class="col text-start">
                         <p class="d-inline display-6 my-4 fw-bold"><?= $_SESSION['user_pseudo'] ?></p><i class="bi bi-patch-check-fill ms-2 fs-4 text-primary"></i>
                     </div>
-                    <div class="col-lg-3 text-center">
+                    <div class="col-lg-4 text-center">
                         <a href="#" class="btn btn-sm btn-outline-primary w-100">paramètres</a>
                     </div>
                 </div>

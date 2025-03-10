@@ -2,7 +2,7 @@
 
 <body class="bg-primary">
 
-    <h1 class="text-center my-2 text-white">Connexion</h1>
+    <h1 class="text-center my-5 text-white">Connexion</h1>
 
     <div class="col-lg-4 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
 
@@ -12,13 +12,13 @@
                 
                 <div class="col-lg-12">
                     <label for="identifiant" class="form-label">Identifiant</label>
-                    <input type="text" class="form-control form-control-sm <?= isset($_POST['identifiant']) ? (isset($errors['identifiant']) ? 'is-invalid' : 'is-valid') : '' ?>" id="identifiant" name="identifiant" value="<?= $_POST['identifiant'] ?? '' ?>" required>
+                    <input type="text" class="form-control form-control-sm <?= isset($errors['identifiant']) ? 'is-invalid' : '' ?>" id="identifiant" name="identifiant" value="<?= $_POST['identifiant'] ?? '' ?>" required>
                     <div class="invalid-feedback"><?= $errors['identifiant'] ?? '' ?></div>
                 </div>
 
                 <div class="col-lg-12">
                     <label for="password" class="form-label">Mot de passe</label>
-                    <input type="password" class="form-control form-control-sm <?= isset($errors['identifiant']) ? 'is-invalid' : '' ?>" id="password" name="password" required>
+                    <input type="password" class="form-control form-control-sm <?= isset($errors['password']) ? 'is-invalid' : '' ?>" id="password" name="password" required>
                     <div class="invalid-feedback"><?= $errors['password'] ?? '' ?></div>
                 </div>
 
