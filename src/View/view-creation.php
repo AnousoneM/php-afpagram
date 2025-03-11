@@ -4,11 +4,11 @@
 
     <?php include '../../templates/navbar.php' ?>
 
-    <main class="container p-3 offset-lg-4 col-lg-6 col-12 bg-light">
-
-        <h1 class="text-center mt-4 mb-2">POST'it!</h1>
+    <main class="container p-lg-5 offset-lg-4 col-lg-6 col-12">
 
         <div class="col-lg-11 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
+
+        <h1 class="text-center mb-4">POST'it !</h1>
 
             <form action="" method="POST" enctype="multipart/form-data" novalidate>
 

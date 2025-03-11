@@ -86,6 +86,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // on va enregistrer notre image avec le même nom que celle dans notre bdd
             move_uploaded_file($_FILES["photo"]["tmp_name"], $user_directory . $pic_name);
+
+            // on renvoie vers la page home
+            header('Location: controller-home.php');
+            exit;
         }
 
         $pdo = '';
