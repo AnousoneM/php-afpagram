@@ -4,7 +4,7 @@
 
     <?php include '../../templates/navbar.php' ?>
 
-    <main class="container p-3 offset-lg-5 col-lg-4 col-12 bg-light">
+    <main class="container p-3 offset-lg-4 col-lg-6 col-12 bg-light">
 
         <h1 class="text-center mt-4 mb-2">POST'it!</h1>
 
