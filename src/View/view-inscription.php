@@ -2,9 +2,11 @@
 
 <body class="bg-primary">
 
-    <h1 class="text-center my-2 text-white">Inscription</h1>
+    <h1 class="text-center h3 mt-5 mb-2 text-white">Inscription</h1>
 
-    <div class="col-lg-4 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
+    <div class="col-lg-3 col-11 mx-auto my-3 bg-light p-4 shadow rounded">
+
+        <p class="fs-1 text-center text-logo">Afpagram</p>
 
         <form action="" method="POST" novalidate>
 
@@ -64,9 +66,9 @@
                 </div>
 
                 <div class="col-lg-11">
-                    <div class="form-check mt-3 mb-2">
+                    <div class="form-check mt-3 mb-2 text-start">
                         <input class="form-check-input <?= isset($errors['cgu']) ? 'is-invalid' : '' ?>" type="checkbox" id="cgu" name="cgu" required>
-                        <label class="form-check-label" for="cgu">
+                        <label class="form-check-label text-cgu" for="cgu">
                             J'ai compris les conditions d'utilisation générale
                         </label>
                         <div class="invalid-feedback"><?= $errors['cgu'] ?? '' ?></div>

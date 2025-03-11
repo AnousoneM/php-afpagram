@@ -2,7 +2,8 @@
 
 session_start();
 
-if(isset($_SESSION['user_id'])){
+// si la personne est tjs loggée, nous le redirigeons vers son profil
+if (isset($_SESSION['user_id'])) {
     // on renvoie vers la page profile
     header('Location: controller-profile.php');
     exit;
@@ -17,6 +18,7 @@ $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['identifiant'])) {
+        // verifie si le champs vide
         if (empty($_POST['identifiant'])) {
             $errors['identifiant'] = 'champs obligatoire';
         }
@@ -29,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
+    // si les champs sont remplis, nous allons pouvoir controler : mail et password
     if (!empty($_POST['identifiant']) && !empty($_POST['password'])) {
 
         // connexion à la base de données via PDO (PHP Data Objects) = création instance
@@ -58,11 +61,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($found == false) {
             $errors['connexion'] = 'identifiant ou mot de passe incorrect';
         } else {
+            // utilisation de password verify pour controle le password avec celui dans la bdd
             if (password_verify($_POST['password'], $user['user_password'])) {
-                // nous stockons les données de l'utilisateur dans la session
+                // nous stockons les données de l'utilisateur dans la variable de session : $_SESSION
                 $_SESSION = $user;
 
-                // nous supprimons le mot de passe de la session
+                // nous supprimons le mot de passe de la variable de session
                 unset($_SESSION['user_password']);
                 unset($_SESSION['user_activated']);
 

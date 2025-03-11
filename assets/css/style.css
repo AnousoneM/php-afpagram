@@ -23,6 +23,11 @@ body {
     width: 1.6rem;
 }
 
+.nav-avatar {
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
 .com-show {
     text-decoration: none;
     color: grey;
@@ -44,4 +49,8 @@ body {
 
 textarea {
     resize: none;
+}
+
+.text-cgu {
+    font-size: 0.8rem;
 }

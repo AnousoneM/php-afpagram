@@ -126,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (!empty($_POST['password']) && (!empty($_POST['confirmPassword']))) {
+        // on verifie que les mots de passe sont identiques
         if ($_POST['password'] != $_POST['confirmPassword']) {
             $errors['confirmPassword'] = 'les mots de passe ne sont pas identiques';
         }
@@ -139,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (!isset($_POST['cgu'])) {
+        // nous verifions que les CGU sont bien cochés
         $errors['cgu'] = 'Veuillez valider les CGU';
     }
 
@@ -193,20 +195,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // on test si la requête s'execute
         if ($stmt->execute()) {
 
+            // on recupère l'id de l'utilisateur nouvellement créé à l'aide de fonction lastInsertId()
             $user_id = $pdo->lastInsertId();
-            // nom de l'avatar par défaut
+
+            // nous indiquons le nom de notre avatar par défaut
             $avatar_name = 'avatar.png';
         
             // nom du dossier que nous allons créer pour l'utilisateur
             $user_directory = "../../assets/img/users/$user_id/avatar/";
+
             // chemin de l'avatar : chemin + nom
             $avatar_directory = "../../assets/img/$avatar_name";
         
             // nous allons créer un dossier avec les droits : 777
             mkdir($user_directory, 0777, true);
-            // nous copions l'avatar dans le dossier cible de l'utilisateur
+
+            // nous copions l'avatar dans le dossier cible de l'utilisateur à l'aide de la fonction copy()
             copy($avatar_directory, $user_directory . $avatar_name);
 
+            // nous effectuons une redirection vers la confirmation de creation
             header('Location: controller-confirmation.php');
             exit;
         }

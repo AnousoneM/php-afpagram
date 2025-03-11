@@ -1,15 +1,17 @@
 <?php include_once '../../templates/head.php' ?>
 
-<body class="bg-primary">
+<body class="bg-primary pt-lg-5">
 
-    <h1 class="text-center my-2 text-white">Inscription prise en compte !</h1>
+    <h1 class="text-center h3 my-5 text-white">Inscription prise en compte !</h1>
 
-    <div class="col-lg-4 col-12 mx-auto my-3 bg-light p-4 shadow rounded">
+    <div class="col-lg-3 col-10 mx-auto my-3 bg-light p-4 shadow rounded">
 
         <div class="row g-1 justify-content-center">
-            
+
+            <p class="fs-1 text-center text-logo">Afpagram</p>
+
             <div class="col-lg-12 text-center">
-                <p class="fs-5">Vous pouvez maintenant vous connecter</p>
+                <p class="fs-5">Bienvenue,<br> vous pouvez maintenant vous connecter !</p>
             </div>
 
             <div class="col-lg-12">

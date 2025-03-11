@@ -18,7 +18,7 @@
                     <a class="text-dark" href="#"><i class="bi bi-chat me-2 fw-b"></i></a>
                 </div>
                 <p class="my-1 fw-bold">33 J'aime</p>
-                <p class="my-1"><span class="fw-bold me-1"><?= $post['user_pseudo'] ?></span><?= $post['post_description']?></p>
+                <p class="my-1"><span class="fw-bold me-1"><?= $post['user_pseudo'] ?></span><?= $post['post_description'] ?></p>
                 <a href="#" class="com-show">Afficher les 3 commentaires</a>
                 <a href="#" class="com-add">Ajouter un commentaire ...</a>
             </div>
@@ -26,6 +26,8 @@
         <?php } ?>
 
     </main>
+
+    <?php include '../../templates/navbar-mobile.php' ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

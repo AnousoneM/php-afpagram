@@ -1,12 +1,13 @@
 <?php
-// on demarre une session
+
 session_start();
 
-// on désatribue la variable $_SESSION
+// on désatribue la variable $_SESSION à l'aide de unset()
 unset($_SESSION);
 
-// on détruit la session
+// on détruit la session à l'aide session_destroy
 session_destroy();
+
 ?>
 
 

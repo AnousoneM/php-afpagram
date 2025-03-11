@@ -6,7 +6,7 @@ require_once '../../config.php';
 
 // on controle si la personne est bien loggée
 if (!isset($_SESSION['user_id'])) {
-    // on renvoie vers la page d'accueil
+    // on renvoie vers la page d'accueil si non
     header('Location: ../../public/');
     exit;
 }
@@ -19,7 +19,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // requete SQL me permettant de rechercher tous les posts
 $sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (
-(SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`)," . $_SESSION['user_id'] . ");";
+(SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`)," . $_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
 
 // on prepare la requete pour se prémunir des injections SQL
 $stmt = $pdo->query($sql);
