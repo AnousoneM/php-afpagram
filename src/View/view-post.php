@@ -4,14 +4,17 @@
 
     <?php include '../../templates/navbar.php' ?>
 
-    <main class="container px-4 offset-lg-2 col-lg-10 col-12">
+    <main class="container vh-100 d-flex flex-column justify-content-lg-center p-lg-4 pt-2 offset-lg-2 col-lg-10 col-12">
 
-        <div class="row m-0 p-3 bg-light">
+        <div class="text-end w-100"><a href="../Controller/controller-home.php" class="text-light"><i class="bi bi-x-square h3"></i></a></div>
 
-            <div class="col-6 vh-100 border">
-                <img src="../../assets/img/users/1/67d0316fccb82_isaac.png" class="img-fluid" alt="">
+        <div class="row m-0 p-3 bg-light rounded shadow">
+
+            <div class="col-lg-8 col-12">
+                <img src="../../assets/img/users/2/67d0196793d36_pexels-cottonbro-7568430.jpg" class="img-post-full" alt="">
             </div>
-            <div class="col-6 border">
+
+            <div class="col-lg-4 col-12 p-3">
                 <p>qsdqsdsqd</p>
                 <p>qsdqsdsqd</p>
                 <p>qsdqsdsqd</p>

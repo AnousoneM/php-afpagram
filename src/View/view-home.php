@@ -19,8 +19,8 @@
                 </div>
                 <p class="my-1 fw-bold">33 J'aime</p>
                 <p class="my-1"><span class="fw-bold me-1"><?= $post['user_pseudo'] ?></span><?= $post['post_description'] ?></p>
-                <a href="#" class="com-show">Afficher les 3 commentaires</a>
-                <a href="#" class="com-add">Ajouter un commentaire ...</a>
+                <a href="../Controller/controller-post.php" class="com-show">Afficher les 3 commentaires</a>
+                <a href="../Controller/controller-post.php" class="com-add">Ajouter un commentaire ...</a>
             </div>
 
         <?php } ?>
