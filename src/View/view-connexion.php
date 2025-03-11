@@ -2,8 +2,6 @@
 
 <body class="bg-primary pt-lg-5">
 
-    <h1 class="text-center h3 mt-5 mb-5 text-white">Connexion</h1>
-
     <div class="col-lg-3 col-11 mx-auto my-3 bg-light p-4 shadow rounded">
 
         <p class="fs-1 text-center text-logo">Afpagram</p>

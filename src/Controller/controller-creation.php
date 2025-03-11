@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Maintenant nous allons sauvegarder l'image dans le repertoire de l'utilisateur
 
-        // 1 - nous allons créer un nouveau non à notre image pour éviter les noms en doublon :
+        // 1 - nous allons créer un nouveau nom à notre image pour éviter les noms en doublon :
         $pic_name = uniqid() . '_' . basename($_FILES["photo"]["name"]);
 
 
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             move_uploaded_file($_FILES["photo"]["tmp_name"], $user_directory . $pic_name);
 
             // on renvoie vers la page home
-            header('Location: controller-home.php');
+            header('Location: controller-profile.php');
             exit;
         }
 
